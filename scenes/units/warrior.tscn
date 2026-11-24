@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dcpxg32scjwty"]
+
+[ext_resource type="PackedScene" uid="uid://by0ka7f47u6wy" path="res://scenes/units/unit.tscn" id="1_bdwhi"]
+[ext_resource type="Script" uid="uid://mh27ywjo8jdj" path="res://scripts/units/warrior.gd" id="2_fvbna"]
+
+[node name="Warrior" unique_id=1389525311 instance=ExtResource("1_bdwhi")]
+script = ExtResource("2_fvbna")
+attack_damage = 20
+attack_range = 40.0

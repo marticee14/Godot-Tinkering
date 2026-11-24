@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://jyrlvnm4yq4q"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
+
+[node name="Game" type="Node2D" unique_id=180949152]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1630343280]
+anchor_mode = 0
+zoom = Vector2(2, 2)
+
+[node name="Players" type="Node" parent="." unique_id=1802225498]
+
+[node name="World_Boundaries" type="Node" parent="." unique_id=1755301455]
+
+[node name="WorldBoundarySouth" type="StaticBody2D" parent="World_Boundaries" unique_id=421965961]
+position = Vector2(272, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World_Boundaries/WorldBoundarySouth" unique_id=1316755314]
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="WorldBoundaryWest" type="StaticBody2D" parent="World_Boundaries" unique_id=216149953]
+position = Vector2(0, 151)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World_Boundaries/WorldBoundaryWest" unique_id=1742866610]
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="WorldBoundaryEast" type="StaticBody2D" parent="World_Boundaries" unique_id=935452553]
+position = Vector2(576, 158)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World_Boundaries/WorldBoundaryEast" unique_id=639217398]
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="WorldBoundaryNorth" type="StaticBody2D" parent="World_Boundaries" unique_id=1612320635]
+position = Vector2(271, 0)
+rotation = -3.1415925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World_Boundaries/WorldBoundaryNorth" unique_id=1530916285]
+shape = SubResource("WorldBoundaryShape2D_g4v7s")

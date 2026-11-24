@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cudk7wqh180nt"]
+
+[ext_resource type="PackedScene" uid="uid://by0ka7f47u6wy" path="res://scenes/units/unit.tscn" id="1_5ijr0"]
+[ext_resource type="Script" uid="uid://drvyebam5qb54" path="res://scripts/units/archer.gd" id="2_p10bi"]
+
+[node name="Archer" unique_id=1389525311 instance=ExtResource("1_5ijr0")]
+script = ExtResource("2_p10bi")
+attack_damage = 10
+attack_range = 250.0

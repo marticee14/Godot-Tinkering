@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://c04hruv432bj"]
+
+[ext_resource type="Script" uid="uid://cy647rbgblfo8" path="res://scripts/character_knight_blue.gd" id="1_205q1"]
+[ext_resource type="Texture2D" uid="uid://c2nu1lj0pnlvq" path="res://assets/tiny swords/Units/Blue Units/Warrior/Warrior_Idle.png" id="1_dya0h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_205q1"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb8pr"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeqrp"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btcgf"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ucc3"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x45au"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sotw"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_755pt"]
+atlas = ExtResource("1_dya0h")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_205q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb8pr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xeqrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btcgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ucc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x45au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sotw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_755pt")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(33, 51)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=692296419]
+script = ExtResource("1_205q1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1080784850]
+position = Vector2(230, 307)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1909958655]
+position = Vector2(230.5, 314)
+shape = SubResource("RectangleShape2D_g4v7s")
